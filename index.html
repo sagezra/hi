@@ -1,147 +1,437 @@
+<html>
+
 <!DOCTYPE html>
 <html>
-<title>sage ezra</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<body id="myPage">
-  
-<!-- Navbar -->
-<div class="w3-top">
- <div class="w3-bar w3-theme-d2 w3-left-align">
-  <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-hover-white w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
-  <a href="#" class="w3-bar-item w3-button w3-teal"><i class="fa fa-home w3-margin-right"></i>/sagezra</a>
-  <a href="#team" class="w3-bar-item w3-button w3-hide-small w3-hover-white">art</a>
-  <a href="#work" class="w3-bar-item w3-button w3-hide-small w3-hover-white">work</a>
-  <a href="#pricing" class="w3-bar-item w3-button w3-hide-small w3-hover-white">goals</a>
-  <a href="#about" class="w3-bar-item w3-button w3-hide-small w3-hover-white">about</a>
-  <a href="#contact" class="w3-bar-item w3-button w3-hide-small w3-hover-white">contact</a>
-    <div class="w3-dropdown-hover w3-hide-small">
-   </div>
+    <head>
+        <meta charset="utf-8">
+        
+        {block:Description}
+        <meta name="description" content="{MetaDescription}" />
+        {/block:Description}
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
 
-  <!-- Navbar on small screens -->
-  <div id="navDemo" class="w3-bar-block w3-theme-d2 w3-hide w3-hide-large w3-hide-medium">
-    <a href="#team" class="w3-bar-item w3-button">art</a>
-    <a href="#work" class="w3-bar-item w3-button">work</a>
-    <a href="#pricing" class="w3-bar-item w3-button">goals</a>
-    <a href="#contact" class="w3-bar-item w3-button">education</a>
-    <a href="#" class="w3-bar-item w3-button">about</a>
-  </div>
-</div>
+        <!--*******************************************************
+        Name: OtherBasic
+        URL: http://otherthemes.com
+        Author: Other Themes
+        Version: 1.0.0
+        Changelog:
+        25.09.2015 Initial release
+        ********************************************************--> 
 
-<!-- Image Header -->
-<div class="w3-display-container w3-animate-opacity">
-  <img src="/w3images/sailboat.jpg" alt="boat" style="width:100%;min-height:350px;max-height:600px;">
-</div>
+        <title>{block:TagPage}{Tag} posts - {/block:TagPage}{block:PostSummary}{PostSummary} - {/block:PostSummary}{Title}</title>
 
-<!-- Modal -->
-<div id="id01" class="w3-modal">
-  <div class="w3-modal-content w3-card-4 w3-animate-top">
-    <header class="w3-container w3-teal w3-display-container"> 
-      <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-teal w3-display-topright"><i class="fa fa-remove"></i></span>
-      <h4>Oh snap! We just showed you a modal..</h4>
-      <h5>Because we can <i class="fa fa-smile-o"></i></h5>
-    </header>
-    <div class="w3-container">
-      <p>Cool huh? Ok, enough teasing around..</p>
-      <p>Go to our <a class="w3-text-teal" href="/w3css/default.asp">W3.CSS Tutorial</a> to learn more!</p>
-    </div>
-    <footer class="w3-container w3-teal">
-      <p>Modal footer</p>
-    </footer>
-  </div>
-</div>
+        <link rel="image/gif" href="winking bunny favicon.gif">
+        
+        <link rel="stylesheet" type="text/css" href="http://static.tumblr.com/nxwjyyg/vhKoztsl7/style.css">
 
-<!-- Art Container -->
-<div class="w3-container w3-padding-64 w3-center" id="team">
-<h2>ART COLLECTION</h2>
-<p>photography | digital | fiber | other visual </p>
+        {block:IfGoogleFonts}
+        <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family={text:Google Fonts}:400,400italic,700,700italic">
+        {/block:IfGoogleFonts}
+        
+        {block:Hidden}
+        <!-- Font -->
+        <meta name="font:Font" content="Helvetica">
+        <meta name="text:Google Fonts" content="Karla">
+        <meta name="if:Google Fonts" content="1">
+        <!-- Color -->
+        <meta name="color:Body Text" content="#000">
+        <meta name="color:Background" content="#FFF">
+        <!-- Toggle -->
+        <meta name="if:Show Archive" content="1">
+        <meta name="if:Center Text" content="0">
+        <meta name="if:Show Logo" content="0">
+        <meta name="if:Sticky Logo" content="0">
+        <meta name="if:Show Title" content="1">
+        <meta name="if:Sticky Title" content="1">
+        <meta name="if:Show Description" content="1">
+        <meta name="if:Sticky Description" content="0">
+        <meta name="if:Show Share Button" content="1">
+        <meta name="if:Show Like Button" content="1">
+        <meta name="if:Show Reblog Button" content="1">
+        <meta name="if:Show Date" content="1">
+        <meta name="if:Show Notes" content="1">
+        <meta name="if:Show Tags" content="1">
+        <meta name="if:Hide Source" content="1">
+        <meta name="if:Show Large Images" content="0">
+        
+        <!-- Text -->
+        <meta name="text:Twitter URL" content="https://twitter.com/otherthemes">
+        <meta name="text:Facebook URL" content="https://www.facebook.com/otherthemes/">
+        <meta name="text:Instagram URL" content="">
+        <meta name="text:Facebook URL" content="">
+        <meta name="text:Pinterest URL" content="">
+        <meta name="text:LinkedIn URL" content="">
+        <meta name="text:Flickr URL" content="">
+        <meta name="text:StumbleUpon URL" content="">
+        {/block:Hidden}
 
-<div class="w3-row"><br>
+        <style>
+            body {
+                font-family: {font:Font}, sans-serif;
+                font-size: 16px;
+                color: {color:Body Text};
+                position: relative;
+                line-height: 24px;
+                line-height: 1.5em;
+                background: {color:Background};
+                -webkit-font-smoothing: antialiased;
+            }
+            
+            .bottom__copyright a:after {
+                background: {color:Body Text};
+            }
+            
+            body.has-google-fonts {
+                font-family: {text:Google Fonts}, sans-serif;
+            }
+            
+             .icon-heart, 
+             .like_text,
+              a.nav-item,
+              a.a-link,
+              .caption a,
+              .post__footer a {
+                color: {color:Body Text};
+                opacity: .5;
+            }
 
-<div class="w3-quarter">
-  <img src="/w3images/avatar.jpg" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
-  <h3>about my photography</h3>
-  <p>photography</p>
-</div>
+             .icon-heart:hover,
+              a.nav-item:hover,
+              a.a-link:hover,
+              .caption a:hover,
+              .post__footer a:hover {
+                  opacity: 1;
+              }
 
-<div class="w3-quarter">
-  <img src="/w3images/avatar.jpg" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
-  <h3>about my digital work</h3>
-  <p>digital</p>
-</div>
+            .like_button:hover + .like_text {
+                opacity: 1;
+            }
+            
+              h1.title a {
+                line-height: 36px;
+                line-height: 2em;
+                color: {color:Body Text};
+            }
+            
+            .hamburger { color:{color:Body Text}; }
 
-<div class="w3-quarter">
-  <img src="/w3images/avatar.jpg" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
-  <h3>about my embroidery - ghost patches, cross-stitch</h3>
-  <p>fiber</p>
-</div>
-
-<div class="w3-quarter">
-  <img src="/w3images/avatar.jpg" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
-  <h3>paintings, pencil, ink, other mixed media</h3>
-  <p>other visual</p>
-</div>
-
-</div>
-</div>
-
-<!-- Work Row -->
-<div class="w3-row-padding w3-padding-64 w3-theme-l1" id="work">
-
-<div class="w3-quarter">
-<h2>WORK EXPERIENCES</h2>
-<p>resume</p>
-  </div>
-
-<!-- Container -->
-<div class="w3-container" style="position:relative">
-  <a onclick="w3_open()" class="w3-button w3-xlarge w3-circle w3-teal"
-  style="position:absolute;top:-28px;right:24px">+</a>
-</div>
-
-<!-- Goals Container -->
-<div class="w3-row-padding w3-left w3-padding-64" id="pricing">
-  <h2><center>GOALS</center></h2>
-  
-  <ul>
-  <li>career goals:
-    <ul>
-      <li>next job</li>
-      <li>idk</li>
-    </ul>
+        {CustomCSS}
+        </style>
+    </head>
+    <body class="
+    {block:IfGoogleFonts} has-google-fonts{/block:IfGoogleFonts}
+    {block:IndexPage} page-index{/block:IndexPage}
+    {block:IfCenterText} has-center-text{/block:IfCenterText}
+    {block:IfShowLogo}{block:IfStickyLogo} sticky-logo{/block:IfStickyLogo}{/block:IfShowLogo}
+    {block:IfShowTitle}{block:IfStickyTitle} sticky-title{/block:IfStickyTitle}{/block:IfShowTitle}
+    {block:IfShowDescription}{block:IfStickyDescription} sticky-description{/block:IfStickyDescription}{/block:IfShowDescription}
+    {block:PermalinkPage} page-permalink{/block:PermalinkPage}
+    {block:IfShowLogo}avatar-style-{AvatarShape}{/block:IfShowLogo}
+    {block:PermalinkPage}{block:Photoset} page-photoset{/block:Photoset}{/block:PermalinkPage}
+    ">
     
-  <li>artistic goals:
-    <ul>
-      <li>1 art goal</li>
-      <li>art goal 2</li>
-      <li>art goal 3</li>
-    </ul>
-    
-  <li>academic goals:
-    <ul>
-        <ul>
-      <li>online learning/courses</li>
-      <li>youtube</li>
-      <li>master's degree</li>
-    
-</ul>
+        <div class="load-wrapper">
+            <div class="header-overlay">
+                <svg class="svg logo pulse" xmlns="http://www.w3.org/2000/svg" width="65" height="37" viewBox="0 0 65 37" version="1.1"><g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g id="header" transform="translate(1.000000, 1.000000)"><g id="1"><g id="Calque_1"><g id="Group"><polyline id="Shape" stroke="#231F20" stroke-width="1.57" fill="#FFDB74" points="47 9.59 37.14 9.59 34.19 7.05 37.21 0.9 60.29 0.71 62.99 3.85 62.99 9.59 53.13 9.59 53.13 34.96 47 34.96 43.59 32.03"/><path d="M18.57 2.56C27.07 2.56 34.65 8.75 34.65 18.8 34.65 28.81 27.07 34.99 18.57 34.99 10.12 34.99 2.54 28.81 2.54 18.8 2.54 8.75 10.12 2.56 18.57 2.56L18.57 2.56ZM18.57 29.11C23.42 29.11 28.35 25.78 28.35 18.76 28.35 11.73 23.42 8.4 18.57 8.4 13.77 8.4 8.84 11.73 8.84 18.76 8.84 25.78 13.77 29.11 18.57 29.11L18.57 29.11Z" id="Shape" fill="#B4C3E7"/><path d="M18.57 2.56C27.07 2.56 34.65 8.75 34.65 18.8 34.65 28.81 27.07 34.99 18.57 34.99 10.12 34.99 2.54 28.81 2.54 18.8 2.54 8.75 10.12 2.56 18.57 2.56L18.57 2.56ZM18.57 29.11C23.42 29.11 28.35 25.78 28.35 18.76 28.35 11.73 23.42 8.4 18.57 8.4 13.77 8.4 8.84 11.73 8.84 18.76 8.84 25.78 13.77 29.11 18.57 29.11L18.57 29.11Z" id="Shape" stroke="#231F20" stroke-width="1.57"/><polygon id="Shape" stroke="#231F20" stroke-width="1.57" fill="#F99F9F" points="49.98 6.46 49.98 31.83 43.86 31.83 43.86 6.46 33.99 6.46 33.99 0.71 59.84 0.71 59.84 6.46"/><path d="M16.06 0.05C24.56 0.05 32.13 6.24 32.13 16.29 32.13 26.3 24.56 32.49 16.06 32.49 7.6 32.49 0.03 26.3 0.03 16.29 0.03 6.24 7.6 0.05 16.06 0.05L16.06 0.05ZM16.06 26.6C20.9 26.6 25.83 23.27 25.83 16.25 25.83 9.22 20.9 5.89 16.06 5.89 11.26 5.89 6.32 9.22 6.32 16.25 6.32 23.27 11.26 26.6 16.06 26.6L16.06 26.6Z" id="Shape" fill="#A6E7E2"/><path d="M16.06 0.05C24.56 0.05 32.13 6.24 32.13 16.29 32.13 26.3 24.56 32.49 16.06 32.49 7.6 32.49 0.03 26.3 0.03 16.29 0.03 6.24 7.6 0.05 16.06 0.05L16.06 0.05ZM16.06 26.6C20.9 26.6 25.83 23.27 25.83 16.25 25.83 9.22 20.9 5.89 16.06 5.89 11.26 5.89 6.32 9.22 6.32 16.25 6.32 23.27 11.26 26.6 16.06 26.6L16.06 26.6Z" id="Shape" stroke="#231F20" stroke-width="1.57"/></g></g></g></g></g></svg>
+            </div>
+        </div><!--loadwrapper-->
+        
+        <section id="wrapper" class="wrapper">
+            {block:PermalinkPage}
+            <div class="blog-title-wrapper content">
+                <h1 class="blog-title">
+                    <a href="/" class="back_button a-link">&larr;</a>
+                </h1>
+            </div>
+            {/block:PermalinkPage}
+        
+            {block:IndexPage}
+            {block:IfShowLogo}
+            <div class="header-avatar">
+                <img class="user-avatar hero" src="{PortraitURL-128}"/>
+            </div>
+            {/block:IfShowLogo}
 
-   
+            {block:IfShowTitle}
+            <h1 class="head-title hero"><a href="/" title="{lang:Home}">{Title}</a></h1>
+            {/block:IfShowTitle}
 
-  
-</div>
+            {block:IfShowDescription}
+            {block:Description}
+            <p class="header-desc hero">{Description}</p>
+            {block:Description}
+            {/block:IfShowDescription}
+                    
+            <!--Navigation-->
+            <nav class="header">
+                <button class="hamburger">
+                    Menu
+                </button>
+                <ul class="nav">
+                    {block:HasPages}
+                    {block:Pages}
+                    <li>
+                        <a href="{URL}" class="nav-item">{Label}</a>
+                    </li>
+                    {/block:Pages}
+                    {/block:HasPages}
+                    {block:IfShowArchive}
+                     <li>
+                        <a href="/archive" class="nav-item">{lang:Archive}</a>
+                     </li>
+                    {/block:IfShowArchive}
+                    {block:SubmissionsEnabled}
+                    <li>
+                        <a href="/submit" class="nav-item">{SubmitLabel}</a>
+                    </li>
+                    {/block:SubmissionsEnabled}
+                    {block:AskEnabled}
+                    <li>
+                        <a href="/ask" class="nav-item">{AskLabel}</a>
+                    </li>
+                    {/block:AskEnabled}
+                    {block:IfGithubURL}
+                    <li>
+                        <a href="{text:Github URL}" class="nav-item">Github</a>
+                    </li>
+                    {/block:IfGithubURL}
+                    {block:IfFlickrURL}
+                    <li>
+                        <a href="{text:Flickr URL}" class="nav-item">Flickr</a>
+                    </li>
+                    {/block:IfFlickrURL}
+                    {block:IfVimeoURL}
+                    <li>
+                        <a href="{text:Vimeo URL}" class="nav-item">Vimeo</a>
+                    </li>
+                    {/block:IfVimeoURL}
+                    {block:IfTwitterURL}
+                    <li>
+                        <a href="{text:Twitter URL}" class="nav-item">Twitter</a>
+                    </li>
+                    {/block:IfTwitterURL}
+                    {block:IfFacebookURL}
+                    <li>
+                        <a href="{text:Facebook URL}" class="nav-item">Facebook</a>
+                    </li>
+                    {/block:IfFacebookURL}
+                    {block:IfGooglePlusURL}
+                    <li>
+                        <a href="{text:Google Plus URL}" class="nav-item">Google Plus</a>
+                    </li>
+                    {/block:IfGooglePlusURL}
+                    {block:IfPinterestURL}
+                    <li>
+                        <a href="{text:Pinterest URL}" class="nav-item">Pinterest</a>
+                    </li>
+                    {/block:IfPinterestURL}
+                    {block:IfLinkedInURL}
+                    <li>
+                        <a href="{text:LinkedIn URL}" class="nav-item">Linkedin</a>
+                    </li>
+                    {/block:IfLinkedInURL}
+                    {block:IfDribbbleURL}
+                    <li>
+                        <a href="{text:Dribbble URL}" class="nav-item">Dribbble</a>
+                    </li>
+                    {/block:IfDribbbleURL}
+                    {block:IfStumbleUponURL}
+                    <li>
+                        <a href="{text:StumbleUpon URL}" class="nav-item">StumbleUpon</a>
+                    </li>
+                    {/block:IfStumbleUponURL}
+                    {block:IfLastFMURL}
+                    <li>
+                        <a href="{text:LastFM URL}" class="nav-item">LastFM</a>
+                    </li>
+                    {/block:IfLastFMURL}
+                    {block:IfSpotifyURL}
+                    <li>
+                        <a href="{text:Spotify URL}" class="nav-item">Spotify</a>
+                    </li>
+                    {/block:IfSpotifyURL}
+                    {block:IfInstagramURL}
+                    <li>
+                        <a href="{text:Instagram URL}" class="nav-item">Instagram</a>
+                    </li>
+                    {/block:IfInstagramURL}
+                    {block:IfSkypeURL}
+                    <li>
+                        <a href="{text:Skype URL}" class="nav-item">Skype</a>
+                    </li>
+                    {/block:IfSkypeURL}
+                    {block:RenrenURL}
+                    <li>
+                        <a href="{text:Renren URL}" class="nav-item">Renren</a>
+                    </li>
+                    {/block:RenrenURL}
+                    {block:IfWeiboURL}
+                    <li>
+                        <a href="{text:Weibo URL}" class="nav-item">Weibo</a>
+                    </li>
+                    {/block:IfWeiboURL}
+                    {block:IfSoundcloudURL}
+                    <li>
+                        <a href="{text:Soundcloud URL}" class="nav-item">Soundcloud</a>
+                    </li>
+                    {/block:IfSoundcloudURL}
+                    {block:IfBehanceURL}
+                    <li>
+                        <a href="{text:Behance URL}" class="nav-item">Behance</a>
+                    </li>
+                    {/block:IfBehanceURL}
+                    {block:IfVKURL}
+                    <li>
+                        <a href="{text:VK URL}" class="nav-item">VK</a>
+                    </li>
+                    {/block:IfVKURL}
+                </ul>
+            </nav>
+         
 
-  <!-- About Container -->
-<div class="w3-row-padding w3-center w3-padding-64" id="about">
-    <h2>about</h2>
-    <p>3 to 4 sentences</p>
+            <!--Pagination: previous/next page links-->
+            {block:Pagination}
+            <nav id="pagination">
+                <ul>
+                    {block:PreviousPage}
+                    <li>
+                        <a href="{PreviousPage}" class="previous">Previous page</a>
+                    </li>
+                    {/block:PreviousPage}
+                    {block:NextPage}
+                    <li>
+                        <a href="{NextPage}" class="next">Loading..</a>
+                    </li>
+                    {/block:NextPage}
+                </ul>
+            </nav>
+            {/block:Pagination}
+            {block:PostNotes}
+            <div id="notes">
+                {PostNotes-64}
+            </div>
+            {/block:PostNotes}
+            {block:IndexPage}
+            <span class="bottom__copyright">
+                Theme by <a href="http://otherthemes.com">Other</a>
+            </span>             
+            {/block:IndexPage}
+        </section>
 
-</div>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+        <script src="http://static.tumblr.com/hpghjri/co2nfnr1j/infinitescroll.min.js"></script>
+        <script src="http://static.tumblr.com/hugxd2w/nyZmm78dc/pxuphotoset.min.js"></script>
+        <script>
 
-  
+        var $body = $("body"),
+            Basic = {
+                init: function() {
+                    this.stopAnimationLogo()
+                    this.initInfiniteScroll()
+                    if($('.photo-slideshow').length > 0) {
+                        this.initPhotoset()   
+                    }
+                },
+                stopAnimationLogo: function() {
+                    $("svg.logo").attr("class", "hidden"), 
+                    $("#wrapper").addClass('fade-in'), 
+                    $(".load-wrapper").attr("class", "hidden load-wrapper")
+                },
+                initPhotoset: function() {
+                    $('.photo-slideshow').pxuPhotoset({
+                        'lightbox'  : true,
+                        'highRes'   : true,
+                        'rounded'   : false,
+                        'exif'      : false,
+                        'captions'  : false,
+                        'gutter'    : '15px',
+                        'photoset'  : '.photo-slideshow',
+                        'photoWrap' : '.photo-data',
+                        'photo'     : '.pxu-photo'
+                    }); 
+                },
+                initInfiniteScroll: function() {
+                    var t=$("#content");
+                        
+                    t.infinitescroll({
+                        nextSelector:"#pagination .next",
+                        navSelector:"#pagination",
+                        itemSelector:"article",
+                        appendCallback:!0,
+                        bufferPx:500,
+                        {block:IfShowTrigger}
+                        behavior:"twitter",
+                        {/block:IfShowTrigger}
+                        loading:{
+                            finishedMsg:" ",
+                            img:"data:image/gif;base64,R0lGODlhAQABAHAAACH5BAUAAAAALAAAAAABAAEAAAICRAEAOw==",
+                            msg:null,
+                            msgText:" ",
+                            selector:null,
+                            finished:function(){
+                                $("#pagination .next").html("{lang:Load more posts}")
+                            }
+                        }
+                    },
+                    function(t){
+                        var n=$(t),
+                        i=n.map(function(){
+                            return this.id
+                        }).get();
+
+                        Tumblr.LikeButton.get_status_by_post_ids(i)
+                        if($('.photo-slideshow').length > 0) {
+                            Basic.initPhotoset()   
+                        }
+                    });
+                }
+            };          
+
+        $(function(){
+            Basic.init();
+
+            if($('body').hasClass('page-permalink')) {
+                $("#notes-link").click(function(s) {
+                    return s.preventDefault(), 
+                    $(this).toggleClass("active"), 
+                    $(this).hasClass("active") ? $body.removeClass("webkit-flex") : $(this).hasClass("active") || $body.addClass("webkit-flex"),
+                    $(".notes").toggle(), !1
+                });
+                
+                (0 != $(".page-permalink").find(".video").length || 0 != $(".page-permalink").find(".audio").length) && ($(".page-permalink").find("#content").addClass("block"), 
+                $(".page-permalink").find(".wrapper").addClass("margin")), 0 != $(".page-permalink").find(".photoset").length && $(".page-permalink").addClass("page-photoset");
+            }
+
+            var $hamburger = $('.page-index .hamburger'),
+                $nav = $('.page-index .nav'),
+                resizeTimer;
+
+            $hamburger.on('mouseenter', function() {
+               $nav.addClass('show');
+               $hamburger.addClass('hide');
+            });
+
+            $nav.on('mouseleave', function() {
+                $nav.removeClass('show');
+                $hamburger.removeClass('hide');
+            });
+
+            $(window).on('resize', function() {
+                clearTimeout(resizeTimer);
+
+                resizeTimer = setTimeout(function() {
+                    $(".page-permalink #content").height() + 200 > $body.height() ? $body.removeClass("center-vert webkit-flex") : $body.addClass("center-vert webkit-flex")
+
+                    $nav.removeClass('show');
+                    $hamburger.removeClass('hide');
+                }, 250);
+            });
+
+            {block:IfHideSource}$("p").remove(":contains('Source:'),:contains('via ')");{/block:IfHideSource}
+        });
+        </script>
+
   
 <!-- Contact Container -->
 <div class="w3-container w3-padding-64 w3-theme-l5" id="contact">
@@ -164,15 +454,13 @@
 <img src="https://i.pinimg.com/564x/20/1b/83/201b83b155bc744f89bd630e664a0ac1.jpg" class="w3-image w3-greyscale-min" style="width:100%;">
 
 <!-- Footer -->
-<footer class="w3-container w3-padding-32 w3-theme-d1 w3-center">
   <h4>social media</h4>
-  <a class="w3-button w3-large w3-teal" href="https://www.flickr.com/photos/109452566@N07/" title="flickr"><i class="fa fa-flickr"></i></a>
-  <a class="w3-button w3-large w3-teal" href="https://www.youtube.com/channel/UCWHWy0XmYpJNbeJctvsEwhA" title="youtube"><i class="fa fa-youtube"></i></a>
-  <a class="w3-button w3-large w3-teal" href="https://www.pinterest.com/cestsage/portfolio/" title="Google +"><i class="fa fa-pinterest"></i></a>
-  <a class="w3-button w3-large w3-teal" href="https://www.instagram.com/genderdazed/" title="instagram"><i class="fa fa-instagram"></i></a>
-  <a class="w3-button w3-large w3-teal w3-hide-small" href="https://www.linkedin.com/in/cannadyhe/" title="linkedin"><i class="fa fa-linkedin"></i></a>
+  <a href="https://www.flickr.com/photos/109452566@N07/" title="flickr"><i class="fa fa-flickr"></i></a>
+  <a href="https://www.youtube.com/channel/UCWHWy0XmYpJNbeJctvsEwhA" title="youtube"><i class="fa fa-youtube"></i></a>
+  <a href="https://www.pinterest.com/cestsage/portfolio/" title="Google +"><i class="fa fa-pinterest"></i></a>
+  <a href="https://www.instagram.com/genderdazed/" title="instagram"><i class="fa fa-instagram"></i></a>
+  <a href="https://www.linkedin.com/in/cannadyhe/" title="linkedin"><i class="fa fa-linkedin"></i></a>
   
-  <p>website template from <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
 
   <div style="position:relative;bottom:100px;z-index:1;" class="w3-tooltip w3-right">
     <span class="w3-text w3-padding w3-teal w3-hide-small">home</span>   
@@ -181,30 +469,7 @@
   </div>
 </footer>
 
-<script>
-// Script for side navigation
-function w3_open() {
-  var x = document.getElementById("mySidebar");
-  x.style.width = "300px";
-  x.style.paddingTop = "10%";
-  x.style.display = "block";
-}
 
-// Close side navigation
-function w3_close() {
-  document.getElementById("mySidebar").style.display = "none";
-}
-
-// Used to toggle the menu on smaller screens when clicking on the menu button
-function openNav() {
-  var x = document.getElementById("navDemo");
-  if (x.className.indexOf("w3-show") == -1) {
-    x.className += " w3-show";
-  } else { 
-    x.className = x.className.replace(" w3-show", "");
-  }
-}
-</script>
 
 </body>
 </html>
