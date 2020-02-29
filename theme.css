@@ -31,6 +31,20 @@
              padding-bottom: 50px;
              padding-left: 100px;
 }
+
+
+.column {
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+
       body {
              background-color: #f6eee9;
              font-family: "Arial", Arial, sans-serif;
