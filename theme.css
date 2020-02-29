@@ -37,11 +37,20 @@
   display: table;
   clear: both;
   width 100%;
-  padding: 0 6px;
+  padding: 10px;
 }
 
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
 .column {
-  padding: 0 6px;
+  padding: 10px;
+  float: left;
+  width: 50%;
   display: flex;
   flex-wrap: wrap;
 }
