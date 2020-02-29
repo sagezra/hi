@@ -9,7 +9,7 @@
 }
 
 
-      container {
+      nav {
              background-color: #f6eee9;
              font-family: "Arial", Arial, sans-serif;
              padding-top: 50px;
@@ -17,6 +17,10 @@
              padding-bottom: 50px;
              padding-left: 100px;
              list-style-type: none;
+}
+
+#navigation li{
+  list-style-type: none;
 }
 
       div {
